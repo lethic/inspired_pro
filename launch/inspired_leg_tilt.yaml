@@ -1,0 +1,116 @@
+joint1_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: hip_r
+    joint_speed: 1.0
+    motor:
+        id: 1
+        init: 512
+        min: 312
+        max: 712
+
+joint2_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: thigh_r
+    joint_speed: 1.0
+    motor:
+        id: 2
+        init: 512
+        min: 312 
+        max: 712
+
+joint3_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: shank_r
+    joint_speed: 1.0
+    motor:
+        id: 3
+        init: 512
+        min: 312
+        max: 712
+        
+joint4_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: ankle_r
+    joint_speed: 1.0
+    motor:
+        id: 4
+        init: 512
+        min: 312
+        max: 712
+        
+joint5_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: hip_l
+    joint_speed: 1.0
+    motor:
+        id: 5
+        init: 512
+        min: 312
+        max: 712
+
+joint6_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: thigh_l
+    joint_speed: 1.0
+    motor:
+        id: 6
+        init: 512
+        min: 312
+        max: 712
+
+joint7_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: shank_l
+    joint_speed: 1.0
+    motor:
+        id: 7
+        init: 512
+        min: 312
+        max: 712
+
+joint8_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: ankle_l
+    joint_speed: 1.0
+    motor:
+        id: 8
+        init: 512
+        min: 312
+        max: 712
+
+joint9_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: waist
+    joint_speed: 1.0
+    motor:
+        id: 9
+        init: 512
+        min: 0
+        max: 1023
