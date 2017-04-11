@@ -35,24 +35,24 @@ def main():
     leg = Joint('leg')
     flag = 1
     joint_pos = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    POS_SIT = [0, 0.614, -0.614, 0, 0, -0.614, 0.614, 0, 0]
-    POS_STAND = [0, -0.65, 0.65, 0, 0, 0.65, -0.65, 0, 0]
+    POS_SIT = [0, 0.5, -0.5, 0, 0, -0.5, 0.5, 0, 0]
+    POS_STAND = [0, -0.5, 0.5, 0, 0, 0.5, -0.5, 0, 0]
 
 
 
     #left shift
-    M_L_S = [0.2, 0, 0, 0.3, 0.3, 0, 0, 0.3, 0]
+    M_L_S = [0.3, 0, 0, 0.3, 0.3, 0, 0, 0.3, 0]
     #right leg up
-    M_R_U = [0, 0.7, 0, 0, 0, 0, 0, 0, 0]
+    M_R_U = [-0.05, 0.8, 0.3, -0.3, 0, 0, 0, 0, 0]
     #left shift back to middle and left leg down
-    M_FL_S =[-0.45, 0, 0, -0.35, -0.35, 0, 0.7, -0.35, 0]
+    M_FL_S =[-0.45, 0, 0, -0.35, -0.35, 0, 0.6, -0.35, 0]
 
     #right shift
-    M_R_S = [-0.3, 0, 0, -0.3, -0.4, 0, 0, -0.3, 0]
+    M_R_S = [-0.3, 0, 0, -0.3, -0.3, 0, 0, -0.3, 0]
     #left leg up
-    M_L_U = [0, 0, 0, 0, 0, -0.7, 0, 0, 0]
+    M_L_U = [0, 0, 0, 0, 0.05, -0.8, -0.3, 0.3, 0]
     #right shift back to middle and right leg down
-    M_FR_S =  [0.35, 0, -0.7, 0.35, 0.45, 0, 0, 0.35, 0]
+    M_FR_S =  [0.35, 0, -0.6, 0.35, 0.45, 0, 0, 0.35, 0]
     #move amount
 #    DIFF = 0.3
 #    DIFF_M = 0.7
@@ -85,7 +85,7 @@ def main():
     leg.move_joint()
     state = 1
 
-    POS_TIME = 0.4
+    POS_TIME = 0.3
 
     while 1:
         leg.jta.wait_for_result()
