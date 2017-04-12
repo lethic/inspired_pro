@@ -42,22 +42,22 @@ def main():
 
 
     #left shift
-    M_L_S = [0.3, 0, 0, 0.3, 0.3, 1.0, 0, 0.3, 0]
-    L_T_F = [0, 0, 0, 0, 0, 1.0, 0, 0, 0]
+    M_L_S = [0.3, 0, 0, 0.3, 0.4, 0, 0, 0.4, 0]
+    L_T_F = [0.2, 0, 0, 0, 0, 1.0, 0, 0, 0]
     #right leg up
     M_R_U = [0, 0.5, 0, 0, 0, 0, 0, 0, 0]
     #right hip
-    M_R_H = [-0.1, 0, 0, 0, 0, 0, 0, 0, 0]
+    M_R_H = [-0.2, 0, 0, 0, 0, 0, 0, 0, 0]
     #right leg up again
     M_R_U2 = [0, 0.5, 0, 0, 0, 0, 0, 0, 0]
     #left shift again
-    M_L_S2 = [0, 0, 0, 0, 0.1, 0, 0, 0.1, 0]
+    #M_L_S2 = [0, 0, 0, 0, 0.1, 0, 0, 0.1, 0]
     #right shank forward
     M_L_U = [0, 0, 1.0, 0, 0, 0, 0, 0, 0]
     #left shank forward
     R_S_F = [0, 0, 0, 0, 0, 0, 1.0, 0, 0]
     #shift back
-    R_A_S = [-0.2, 0, 0, -0.3, -0.4, 0, 0, -0.4, 0]
+    R_A_S = [-0.3, 0, 0, -0.3, -0.4, 0, 0, -0.4, 0]
 
     #here is[0, 0.1, 0.9, 0, 0, 0.9, 0.1, 0, 0]
 
@@ -88,7 +88,7 @@ def main():
     leg.move_joint()
     state = 1
 
-    POS_TIME = 0.5
+    POS_TIME = 0.4
 
     while 1:
         leg.jta.wait_for_result()
@@ -96,13 +96,13 @@ def main():
             joint_pos = POS_START
             joint_pos = map(sum, zip(joint_pos, M_L_S))
             leg.add_point(joint_pos, POS_TIME)
-            joint_pos = map(sum, zip(joint_pos, M_R_U))
+            joint_pos = map(sum, zip(joint_pos, L_T_F))
             leg.add_point(joint_pos, POS_TIME *2)
-            joint_pos = map(sum, zip(joint_pos, M_R_H))
+            joint_pos = map(sum, zip(joint_pos, M_R_U))
             leg.add_point(joint_pos, POS_TIME *3)
-            joint_pos = map(sum, zip(joint_pos, M_R_U2))
+            joint_pos = map(sum, zip(joint_pos, M_R_H))
             leg.add_point(joint_pos, POS_TIME *4)
-            joint_pos = map(sum, zip(joint_pos, M_L_S2))
+            joint_pos = map(sum, zip(joint_pos, M_R_U2))
             leg.add_point(joint_pos, POS_TIME *5)
             joint_pos = map(sum, zip(joint_pos, M_L_U))
             leg.add_point(joint_pos, POS_TIME *6)
